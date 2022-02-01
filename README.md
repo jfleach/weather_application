@@ -1,6 +1,6 @@
 # Weather Application 
 
-The following document describes the installation and usage instructions.
+The following documentation describes the installation and usage instructions.
 
 ## Base Operating System Installation
 
@@ -43,7 +43,7 @@ $ python3 test_datetime_weather.py
 ```
 
 ##### Note:
-> Open Weather Map sometimes returns incorrect weather descriptions.  I have seen it return "light rain" or "cloud" when it should be "clear".
+> Open Weather Map sometimes returns incorrect weather descriptions.
 
 ## Viewing the Documentation
 
