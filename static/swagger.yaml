@@ -1,0 +1,92 @@
+---
+swagger: "2.0"
+info:
+  title: "Weather Application"
+  description: "Date, time, and weather API"
+  version: "1.0.0"
+  termsOfService: "N/A"
+  contact:
+    name: "John Leach"
+    email: "jfleach@jfleach.com"
+  license:
+    name: "BSD 2-Clause"
+    url: "https://opensource.org/licenses/BSD-2-Clause"
+host: "localhost:80"
+basePath: "/api/v1"
+schemes:
+- "http"
+produces:
+- "application/json"
+paths:
+  /datetime:
+    get:
+      summary: "Get the the current time and date."
+      description: "Returns the current the time and date."
+      tags:
+      - "datetime"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Success"
+          schema:
+            type: "string"
+        400:
+          description: "Bad request"
+          schema:
+            type: "string"
+        401:
+          description: "Unathorized"
+          schema:
+            type: "string"
+        404:
+          description: "Not found"
+          schema:
+            type: "string"
+        500:
+          description: "Internal server error"
+          schema:
+            type: "string"
+  /weather:
+    get:
+      summary: "Get the weather for a given ZIP code."
+      description: "Get the weather for a given ZIP code."
+      tags:
+      - "weather"
+      produces:
+      - "application/json"
+      operationId: "zip"
+      parameters:
+      - name: "zip"
+        in: "query"
+        description: "The ZIP code to query."
+        required: true
+        type: "string"
+      - name: "units"
+        in: "query"
+        description: "The units for the temperature"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            type: "string"
+        400:
+          description: "Bad request"
+          schema:
+            type: "string"
+        401:
+          description: "Unathorized"
+          schema:
+            type: "string"
+        404:
+          description: "Not found"
+          schema:
+            type: "string"
+        500:
+          description: "Internal server error"
+          schema:
+            type: "string"
+

@@ -1,0 +1,5 @@
+Flask==1.1.1
+Flask-HTTPAuth==3.3.0
+flask-swagger-ui==3.20.9
+requests==2.20.1
+zipcodes==1.0.5

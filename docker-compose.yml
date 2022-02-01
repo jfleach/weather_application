@@ -1,0 +1,28 @@
+version: "2"
+services:
+    nginx_proxy:
+        container_name: nginx_proxy
+        image: nginx:latest
+        ports:
+            - 80:80
+        depends_on:
+            - datetime_weather 
+        volumes:
+            - ./nginx.conf:/etc/nginx/conf.d/default.conf
+        networks:
+            - network
+    datetime_weather:
+        container_name: datetime_weather
+        build: 
+          context: .
+          dockerfile: Dockerfile
+        ports:
+            - 8080:8080
+        networks:
+            network:
+                aliases:
+                    - datetime_weather 
+        volumes:
+            - .:/tmp
+networks:
+    network:
