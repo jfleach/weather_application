@@ -11,7 +11,7 @@ It is recommended that the user installs [Xubuntu 18.04](https://xubuntu.org/rel
 The user can clone the repository by issuing the following command:
 
 ```
-$ git clone https://github.com/jfleach/weather.git
+$ git clone https://github.com/jfleach/weather_application.git
 ```
 
 ## Docker Installation
